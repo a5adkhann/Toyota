@@ -1,0 +1,32 @@
+[
+    {
+        "id" : 1,
+        "image" : "./images/product1.jpg",
+        "title" : "Watch" 
+    },
+    {
+        "id" : 2,
+        "image" : "./images/product2.jpg",
+        "title" : "Shoe" 
+    },
+    {
+        "id" : 3,
+        "image" : "./images/product3.jpg",
+        "title" : "Belt" 
+    },
+    {
+        "id" : 4,
+        "image" : "./images/product4.jpg",
+        "title" : "Black Shirt" 
+    },
+    {
+        "id" : 5,
+        "image" : "./images/product5.jpg",
+        "title" : "Checked Shirt" 
+    },
+    {
+        "id" : 6,
+        "image" : "./images/product6.jpg",
+        "title" : "Long Coat" 
+    }
+]
