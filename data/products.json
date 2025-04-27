@@ -2,31 +2,37 @@
     {
         "id" : 1,
         "image" : "./images/product1.jpg",
-        "title" : "Watch" 
+        "title" : "Watch",
+        "data_name" : "men"
     },
     {
         "id" : 2,
         "image" : "./images/product2.jpg",
-        "title" : "Shoe" 
+        "title" : "Shoe",
+        "data_name" : "men"
     },
     {
         "id" : 3,
         "image" : "./images/product3.jpg",
-        "title" : "Belt" 
+        "title" : "Belt",
+        "data_name" : "men"
     },
     {
         "id" : 4,
         "image" : "./images/product4.jpg",
-        "title" : "Black Shirt" 
+        "title" : "Black Shirt",
+        "data_name" : "women" 
     },
     {
         "id" : 5,
         "image" : "./images/product5.jpg",
-        "title" : "Checked Shirt" 
+        "title" : "Checked Shirt",
+        "data_name" : "men" 
     },
     {
         "id" : 6,
         "image" : "./images/product6.jpg",
-        "title" : "Long Coat" 
+        "title" : "Long Coat",
+        "data_name" : "women"
     }
 ]

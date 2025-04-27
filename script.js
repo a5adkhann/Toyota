@@ -34,7 +34,7 @@ fetch('./data/products.json')
         var data= "";
         product.forEach(element => {
            data += `
-        <div class="card" data-aos="flip-right">
+        <div class="card" data-name="${element.data_name}">
             <div class="card-img">
                 <img src=${element.image} alt="">
             </div>
@@ -48,10 +48,7 @@ fetch('./data/products.json')
     })
 
 // AOS code
-    AOS.init({
-        offset: 300,
-        duration: 1000
-      });
+    AOS.init();
 
 const path = window.location.pathname;
 if(path.includes("contact")){
@@ -66,3 +63,57 @@ else if(path.includes("services")){
 else{
     document.title = "Totota - Home"
 }
+
+
+const filter_buttons = document.querySelectorAll(".filter-buttons-searchInput .filter-buttons button");
+
+let filterProducts = (e) => {
+
+    document.querySelector('.active').classList.remove('active');
+    e.target.classList.add('active');
+
+    console.log("triggered")
+
+const filterable_products = document.querySelectorAll(".cards .card");
+
+
+    filterable_products.forEach(product => {
+        product.classList.add("hideProduct");
+        if(product.dataset.name == e.target.dataset.name || e.target.dataset.name == 'all'){
+            product.classList.remove("hideProduct");
+        }
+    })
+}
+
+filter_buttons.forEach(button => button.addEventListener("click", filterProducts));
+
+
+
+const searchIcon = document.getElementById("searchIcon");
+const searchForm = document.getElementById("searchForm");
+searchIcon.addEventListener("click", () => {
+    searchForm.classList.toggle("searchFieldHide");
+    console.log("ajsjjs")
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

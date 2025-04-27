@@ -106,6 +106,58 @@
     background-repeat: no-repeat;
 }
 
+.filter-buttons-searchInput {
+    padding: 0px 80px 0px 80px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-buttons-searchInput > .filter-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-buttons-searchInput > .filter-buttons > button {
+    background: none;
+    border: none;
+}
+
+.filter-buttons-searchInput > .filter-buttons > .active {
+    border-bottom: 1px solid var(--dark-blue);
+}
+
+.searchFieldHide {
+    display: none;
+}
+
+#searchForm {
+    padding: 0px 80px 0px 80px;
+}
+
+#searchForm input {
+    width: 98%;
+    border: 1px solid lightgray;
+    padding: 5px;
+    margin-top: 20px;
+    transition: all 1s ease-in-out;
+}
+
+#searchForm input:focus {
+    outline: none;
+    border: 1px solid var(--dark-blue);
+}
+
+.filter-buttons-searchInput > .search-section #searchIcon i{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.hideProduct {
+    display: none;
+}
+
 .cards {
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
