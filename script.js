@@ -11,7 +11,7 @@ const navbar_logo = document.getElementById("navbar-logo");
 const cards = document.querySelectorAll(".cards .card");
 
 animate(navbar_logo, {
-    translateX: [0, 20, 0],
+    translateX: [0, 10, 0],
 },
     {
         duration: 1.5,
@@ -34,7 +34,7 @@ fetch('./data/products.json')
         var data= "";
         product.forEach(element => {
            data += `
-        <div class="card">
+        <div class="card" data-aos="flip-right">
             <div class="card-img">
                 <img src=${element.image} alt="">
             </div>
@@ -46,3 +46,23 @@ fetch('./data/products.json')
             document.getElementById("cards").innerHTML = data;
         });
     })
+
+// AOS code
+    AOS.init({
+        offset: 300,
+        duration: 1000
+      });
+
+const path = window.location.pathname;
+if(path.includes("contact")){
+    document.title = "Totota - Contact"
+}
+else if(path.includes("about")){
+    document.title = "Totota - About"
+}
+else if(path.includes("services")){
+    document.title = "Totota - Services"
+}
+else{
+    document.title = "Totota - Home"
+}

@@ -1,6 +1,6 @@
 const footer = `
  <div>
-            <h2 class="footer-section-heading">Presento</h2>
+            <h2 class="footer-section-heading">Toyota</h2>
             <p>A108 Adam Street</p>
             <p>New York, NY 535022</p>
             <p>Phone: +1 5589 55488 55</p>

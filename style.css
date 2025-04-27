@@ -23,56 +23,57 @@
     align-items: center;
 }
 
-.navbar-desktop .navbar-logo i {
+.navbar-desktop > .navbar-logo i {
     font-size: 25px;
     color: var(--red);
 }
 
-.navbar-desktop .navbar-logo a {
+.navbar-desktop > .navbar-logo > a {
     text-decoration: none;
 }
 
-.navbar-desktop .navbar-items ul {
+.navbar-desktop > .navbar-items > ul {
     list-style-type: none;
     display: flex;
     gap: 25px;
 }
 
-.navbar-desktop .navbar-items ul li {
+.navbar-desktop > .navbar-items > ul > li {
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, font-weight 0.3s ease-in-out;
 }
 
-.navbar-desktop .navbar-items ul li i {
+.navbar-desktop > .navbar-items > ul > li > i {
     color: var(--red);
 }
 
-.navbar-desktop .navbar-items ul li:hover i {
+.navbar-desktop > .navbar-items > ul > li:hover > i {
     color: var(--light);
 }
 
-.navbar-desktop .navbar-items ul li:hover {
+.navbar-desktop > .navbar-items > ul > li:hover {
     color: var(--red);
-    transform: translateY(-3px);
+    transform: translateY(-1px);
     font-weight: bold;
+    border-bottom: 1px solid red;
     cursor: pointer;
 }
 
-.navbar-desktop .navbar-items ul li a {
+.navbar-desktop > .navbar-items > ul > li > a {
     color: var(--light);
     text-decoration: none;
 }
 
-.navbar-desktop .navbar-items ul li a:hover {
+.navbar-desktop > .navbar-items > ul > li > a:hover {
     color: var(--red);
 }
 
-.navbar-desktop .navbar-toggle {
+.navbar-desktop > .navbar-toggle {
     visibility: hidden;
     padding: 2px;
     border-radius: 3px;
 }
 
-.navbar-desktop .navbar-toggle:active {
+.navbar-desktop > .navbar-toggle:active {
     background: #252c3d;
 }
 
@@ -83,7 +84,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-#navbar-mobile p a {
+#navbar-mobile > p > a {
     color: var(--light);
     text-decoration: none;
 }
@@ -111,22 +112,20 @@
     gap: 30px;
     padding: 60px 80px 60px 80px;
     background: var(--body);
+    place-items: center;
+    align-content: center;
 }
 
-.cards .card {
+.cards > .card {
     border: 1px solid lightgray;
     transition: transform 0.2s ease-in-out;
 }
 
-.cards .card:hover {
-    transform: translateY(-10px);
-}
-
-.cards .card .card-img img{
+.cards > .card > .card-img > img{
     width: 100%;
 }
 
-.cards .card .card-text {
+.cards > .card > .card-text {
     padding: 10px;
 }
 
@@ -136,12 +135,12 @@
     background: var(--body);
 }
 
-.about-section .about-text p {
+.about-section > .about-text > p {
     text-align: justify;
     width: 80%;
 }
 
-.about-section .about-img img {
+.about-section > .about-img > img {
     width: 300px;
 }
 
@@ -157,38 +156,38 @@
 
 }
 
-.contact-section .contact-form {
+.contact-section > .contact-form {
     width: 50%;
     padding: 20px 80px 20px 80px;
     line-height: 60px;
 }
 
-.contact-section .contact-text {
+.contact-section > .contact-text {
     line-height: 35px;
 }
 
-.contact-section .contact-form h2 {
+.contact-section > .contact-form > h2 {
     text-align: center;
 }
 
-.contact-section .contact-form #field {
+.contact-section > .contact-form > form > #field {
     width: 100%;
     padding: 10px;
     margin-top: 20px;
     border: 1px solid lightgray;
 }
 
-.contact-section .contact-form #field:focus {
+.contact-section > .contact-form > form > #field:focus {
     outline: none;
     border: 1px solid var(--dark-blue);
 }
 
-.contact-section .contact-form textarea {
+.contact-section > .contact-form > form > textarea {
     height: 100px;
     resize: none;
 }
 
-.contact-section .contact-form button {
+.contact-section > .contact-form > form > button {
     width: 100%;
     padding: 8px;   
     background: var(--dark-blue);
@@ -237,26 +236,28 @@ footer {
     background: var(--dark-blue);
     color: var(--light);
     padding: 80px 80px;
+    place-items: center;
+    align-content: center;
 }
 
-footer .newsletter-section form {
+footer > .newsletter-section > form {
     display: flex;
 }
 
-footer .newsletter-section form input {
+footer > .newsletter-section > form > input {
     padding: 5px;
     border: none;
     border: 1px solid red;
     background: none;
 }
 
-footer .newsletter-section form input:focus {
+footer > .newsletter-section > form > input:focus {
     outline: none;
     color: var(--light);
     border: 1px solid var(--light);
 }
 
-footer .newsletter-section form button {
+footer > .newsletter-section > form > button {
     padding: 5px;
     border: none;
     background: var(--red);
@@ -265,10 +266,10 @@ footer .newsletter-section form button {
 
 @media screen and (max-width: 375px){
     
-    .navbar-desktop .navbar-toggle {
+    .navbar-desktop > .navbar-toggle {
         visibility: visible;
     }
-    .navbar-desktop .navbar-items {
+    .navbar-desktop > .navbar-items {
         visibility: hidden;
     }
     .cards {
@@ -279,7 +280,7 @@ footer .newsletter-section form button {
         padding: 50px 50px;
         gap: 30px;
     }
-    .about-section .about-text p {
+    .about-section > .about-text > p {
         width: 100%;
     }
     .contact-section {
@@ -287,11 +288,11 @@ footer .newsletter-section form button {
         margin: 20px;
         padding: 25px 45px;
     }
-    .contact-section .contact-form {
+    .contact-section > .contact-form {
         width: 100%;
         padding: 0;
     }
-    .contact-section .contact-text {
+    .contact-section > .contact-text {
         text-align: center;
     }
     footer {
