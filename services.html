@@ -20,12 +20,69 @@
         <h1>Services</h1>
     </div>
 
+    <div class="filter-buttons-searchInput">
+        <div class="filter-buttons">
+          <button class="active" data-name="all">All</button>
+          <button data-name="men">Men</button>
+          <button data-name="women">Women</button>
+        </div>
+        <div class="search-section">
+          <div id="searchIcon">
+            <i class="ri-search-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <form id="searchForm" class="searchFieldHide">
+        <input type="text" id="searchProduct" placeholder="search" />
+      </form>
+
     <div data-aos="fade-right" class="cards" id="cards"></div>
 
     <footer id="footer"></footer>
 
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="./script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- our aos data -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#searchProduct").keyup(function () {
+                var searchField = $("#searchProduct").val().toLowerCase();  
+                $("#cards").empty();  
+    
+                $.getJSON("./data/products.json", function (data) {
+                    var filteredData = data.filter(function (product) {
+                        return product.title.toLowerCase().includes(searchField);
+                    });
+    
+                    if (filteredData.length > 0) {
+                        $.each(filteredData, function (key, value) {
+                            $("#cards").append(`
+                                <div class="card" data-name="${value.data_name}">
+                                    <div class="card-img">
+                                        <img src="${value.image}" alt="${value.title}">
+                                    </div>
+                                    <div class="card-text">
+                                        <p>${value.title}</p>
+                                    </div>
+                                </div>
+                            `);
+                        });
+                    } else {
+                        $("#cards").append('<p>No products found.</p>');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -112,6 +112,7 @@
     margin-top: 50px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .filter-buttons-searchInput > .filter-buttons {
@@ -122,6 +123,7 @@
 .filter-buttons-searchInput > .filter-buttons > button {
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .filter-buttons-searchInput > .filter-buttons > .active {
@@ -171,6 +173,10 @@
 .cards > .card {
     border: 1px solid lightgray;
     transition: transform 0.2s ease-in-out;
+}
+
+.cards > .card:hover {
+    transform: translateY(-10px);
 }
 
 .cards > .card > .card-img > img{
