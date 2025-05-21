@@ -94,25 +94,3 @@ const searchForm = document.getElementById("searchForm");
 searchIcon.addEventListener("click", () => {
     searchForm.classList.toggle("searchFieldHide");
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
